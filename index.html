@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- importing Cursed Timer ULiL Font Family -->
+    <link
+      href="https://fonts.cdnfonts.com/css/cursed-timer-ulil"
+      rel="stylesheet"
+    />
+
+    <title>Better Scoreboard</title>
+  </head>
+  <body>
+    <!-- wraps the whole board -->
+    <div class="scoreboard-wrapper">
+      <!-- First invisible column -->
+      <div class="column-partition home-column">
+        <!-- where the home score is displayed -->
+        <h2>Home</h2>
+        <output id="home-output-score" class="output-score score-font"></output>
+      </div>
+      <!-- second invisible column -->
+      <!-- . -->
+      <!-- . -->
+      <!-- . -->
+      <!-- . -->
+      <div class="column-partition timer-column">
+        <!-- timer-column-period-column-wrapper  -->
+        <div class="timer-column-period-column-wrapper">
+          <!-- Timer Display  -->
+          <h2>TIMER</h2>
+          <output id="timer-output" class="output-score score-font"></output>
+          <!-- period display  -->
+          <h3>PERIOD</h3>
+          <output id="period-output" class="output-score score-font"></output>
+
+          <!-- end of timer-column-period-column-wrapper  -->
+        </div>
+        <!-- row for the fouls scores and title inside the middle column -->
+        <div class="fouls-row">
+          <output
+            id="home-fouls-output"
+            class="foul-output output-score score-font"
+          ></output>
+          <h3>FOULS</h3>
+          <output
+            id="guest-fouls-output"
+            class="foul-output output-score score-font"
+          ></output>
+        </div>
+        <!-- row for the 2 columns with swiftui toggles -->
+        <div class="swiftui-toggle-wrapper">
+          <!-- swiftui column for home and guest scores -->
+          <div class="swiftui-toggle-left-column">
+            <!-- swiftui toggle  -->
+            <div class="toggle-wrapper">
+              <h3>Home</h3>
+              <label class="switch">
+                <input id="home-checkbox" type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <!-- swiftui toggle  -->
+            <div class="toggle-wrapper">
+              <h3>Guest</h3>
+              <label class="switch">
+                <input id="guest-checkbox" type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <!-- end of swiftui toggle left column -->
+          </div>
+          <!-- swiftui column for period, home foul, and guest foul -->
+          <div class="swiftui-toggle-right-column">
+            <!-- swiftui toggle  -->
+            <div class="toggle-wrapper">
+              <label class="switch">
+                <input id="period-checkbox" type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <h3>Period</h3>
+            </div>
+            <!-- swiftui toggle  -->
+            <div class="toggle-wrapper">
+              <label class="switch">
+                <input id="home-foul-checkbox" type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <h3>Home Foul</h3>
+            </div>
+            <!-- swiftui toggle  -->
+            <div class="toggle-wrapper">
+              <label class="switch">
+                <input id="guest-foul-checkbox" type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <h3>Guest Foul</h3>
+            </div>
+            <!-- end of swiftui toggle right column -->
+          </div>
+          <!-- end of toggle wrapper -->
+        </div>
+        <!-- increment-decrement buttons section  -->
+        <div class="increment-decrement-buttons-wrapper">
+          <button id="decrement-btn" class="increment-section-btns">-</button>
+          <button id="reset-btn" class="increment-section-btns">⟳</button>
+          <button id="increment-btn" class="increment-section-btns">+</button>
+        </div>
+        <div class="timer-buttons-wrapper">
+          <button id="reset-game-btn" class="timer-btns">↻</button>
+          <button id="pause-btn" class="timer-btns">⏸</button>
+          <button id="platy-btn" class="timer-btns">▶</button>
+        </div>
+        <!-- end of time display column -->
+      </div>
+      <!-- . -->
+      <!-- . -->
+      <!-- . -->
+      <!-- . -->
+      <!-- third invisible column -->
+      <div class="column-partition guest-column">
+        <!-- guest display -->
+        <h2>GUEST</h2>
+        <output id="guest-output-score" class="output-score score-font"></output>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

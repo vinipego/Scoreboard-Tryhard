@@ -1,0 +1,231 @@
+@import url("https://fonts.cdnfonts.com/css/cursed-timer-ulil");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 3px black;
+}
+
+h3 {
+  font-size: small;
+}
+
+.scoreboard-wrapper {
+  max-width: 600px;
+  min-height: 400px;
+  margin: 0 auto;
+  background-color: #7a7a7a;
+  border: 10px solid #424242;
+  outline: 8px solid #000000;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.score-font {
+  font-family: "Cursed Timer ULiL", sans-serif;
+}
+
+.output-score {
+  margin: 5px 0 20px 0;
+  display: block;
+  width: 150px;
+  height: 100px;
+  font-size: 100px;
+  padding: 10px 0 0 0;
+  color: #dd0000;
+  background-color: #a0a0a0;
+  border: 5px solid #424242;
+  outline: 5px solid #000000;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px #000000;
+}
+
+.timer-column-period-column-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#timer-output {
+  width: 150px;
+  height: 50px;
+  font-size: 45px;
+  color: #ffff00;
+}
+
+#period-output,
+.foul-output {
+  width: 40px;
+  height: 50px;
+  font-size: 45px;
+  border: 3px solid #424242;
+  outline: 3px solid #000000;
+  border-radius: 10px;
+}
+
+.foul-output {
+  margin-top: 0px;
+  color: #000000;
+}
+#period-output {
+  color: #ffff00;
+  margin-bottom: 0;
+}
+
+.fouls-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.swiftui-toggle-wrapper {
+  /* revisit width  */
+  width: 250px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.toggle-wrapper {
+  display: flex;
+}
+.swiftui-toggle-left-column h3{
+    margin-right: 5px;
+}
+
+.swiftui-toggle-right-column h3{
+    margin-left: 5px;
+}
+
+
+/* swiftui toggle beginning  */
+/* source: https://www.w3schools.com/howto/howto_css_switch.asp */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7a7a7a;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border: 2px solid #424242;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 1.5px;
+  bottom: 1.5px;
+  background-color: #424242;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #a5a6ff;
+  border: 2px solid #0003aa;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #000000;
+}
+
+input:checked + .slider:before {
+  background-color: #0003aa;
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* swiftui toggle end  */
+/* . */
+/* . */
+/* . */
+
+.increment-section-btns {
+    margin: 10px 0;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.increment-section-btns:hover {
+  box-shadow: inset 0 0 5px #000000;
+  cursor: pointer;
+}
+
+#decrement-btn {
+  color: #650000;
+  background-color: #ffa5a5;
+  border: 3px solid #650000;
+}
+
+#reset-btn {
+  color: #0a0065;
+  background-color: #a5a6ff;
+  border: 3px solid #0a0065;
+}
+
+#increment-btn {
+  color: #00650c;
+  background-color: #a5ffa5;
+  border: 3px solid #00650c;
+}
+
+.timer-btns {
+  width: 60px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #686500;
+  background-color: #fffca5;
+  border: 5px solid #686500;
+  border-radius: 15px;
+  padding-bottom: 5px;
+}
+
+.timer-btns:hover {
+  box-shadow: inset 0 0 10px #686500;
+  cursor: pointer;
+}
+
+#reset-game-btn {
+  font-size: 25px;
+}
