@@ -16,7 +16,7 @@ const playBtn = document.getElementById("platy-btn");
 
 // changed to 12 minutes because NBA's game have 4 quarters of 12 minutes each.
 //  source: https://nbatrips.com/en/understanding-nba-game-duration-how-long-is-an-nba-quarter/#:~:text=How%20Long%20is%20Each%20Basketball,have%20two%2020%2Dminute%20halves.
-const twelveMinutes = 60 * 0.5;
+const twoMinutes = 60 * 2;
 
 // global variables to manage the interval and remaining time
 let timerInterval = null;
@@ -250,7 +250,7 @@ function resetGame() {
   homeFoulsOutput.textContent = 0;
   guestFoulsOutput.textContent = 0;
   clearInterval(timerInterval);
-  startTimer(twelveMinutes, timerOutput);
+  startTimer(twoMinutes, timerOutput);
 }
 
 function pauseTimer() {
