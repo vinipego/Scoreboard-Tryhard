@@ -98,14 +98,13 @@ h3 {
 .toggle-wrapper {
   display: flex;
 }
-.swiftui-toggle-left-column h3{
-    margin-right: 5px;
+.swiftui-toggle-left-column h3 {
+  margin-right: 5px;
 }
 
-.swiftui-toggle-right-column h3{
-    margin-left: 5px;
+.swiftui-toggle-right-column h3 {
+  margin-left: 5px;
 }
-
 
 /* swiftui toggle beginning  */
 /* source: https://www.w3schools.com/howto/howto_css_switch.asp */
@@ -179,7 +178,7 @@ input:checked + .slider:before {
 /* . */
 
 .increment-section-btns {
-    margin: 10px 0;
+  margin: 10px 0;
   width: 30px;
   height: 30px;
   font-size: 15px;
